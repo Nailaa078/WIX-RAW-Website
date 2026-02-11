@@ -1,0 +1,104 @@
+/* nav bar icon */
+.top-left{
+    display: flex;
+    align-items: center;
+}
+.top-left a {
+  text-decoration: none; 
+}
+.top-left h1{
+ color: black;
+ margin-left: 15px;
+ font-size: 38px;
+    font-weight: bold;
+}
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* sign In detail */
+.signin{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.signinHeading{
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 46px;
+  margin: 2px;
+}
+.login{
+text-decoration: none; 
+}
+button {
+  color: black;
+  background: rgb(95, 95, 215);
+}
+button:hover{
+background: blue;
+transition: 10ms;
+color: white;
+box-shadow: #5c5b5b;
+}
+/* divider */
+.divider {
+  display: flex;
+  flex-direction: column;   /* vertical direction */
+  align-items: center;
+  justify-content: center;
+  height: 300px;            /* adjust as needed */
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;                  /* equal height */
+  width: 2px;               /* line thickness */
+  background: #abaaaa;         /* line color */
+}
+
+.divider span {
+  margin: 6px 30px;           /* space around "or" */
+  color: #000;
+  font-weight: bold;
+}
+
+/* Right Side */
+
+.social-accounts{
+display: flex;
+flex-direction: column;
+gap: 30px;
+
+}
+.ref{
+ text-decoration: none; 
+ border: 2px solid rgb(85, 84, 84);
+ padding: 10px;
+ background: rgb(222, 216, 216);
+ 
+}
+.icons{
+  margin-right: 20px;
+  
+  color: rgb(47, 47, 69);
+}
+.label{
+color: black;
+}
+/* footer */
+footer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 25px;
+margin-top: 25px;
+}
+.footer-Para{
+font-size: 10px;
+color:rgb(121, 120, 120) ;
+}
