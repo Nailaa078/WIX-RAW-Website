@@ -1,384 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIX RAW Navbar</title>
-    <!-- icons link -->
+    <title>RAW | Always be original</title>
+    <meta name="description" content="RAW caps and hats. Limited edition collection with free shipping worldwide.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Bootstrap CSS link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!--  Bootstrap JS link  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- style sheet -->
-    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Jost', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+                    colors: { ink: '#16151a', night: '#27262b', blush: '#f4dbdb', royal: '#4169e1' }
+                }
+            }
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        dialog::backdrop { background: rgba(0, 0, 0, 0.65); }
+        @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+    </style>
 </head>
+<body class="bg-white font-sans text-ink antialiased">
+<div id="site">
 
-<body>
-    <!-- nave bar -->
-    <section class="section1">
-        <!-- Top bar -->
-        <div class="top-bar">
-            <div class="top-left">
-                <a href="https://www.wix.com/">
-                    <h1 class="logo">WIX</h1>
+    <!-- Wix template banner -->
+    <div class="border-b border-neutral-200 bg-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-6">
+            <a href="https://www.wix.com/" class="text-3xl font-bold tracking-tight text-black" aria-label="Wix home">WIX</a>
+
+            <div id="previewGroup" class="hidden items-center gap-5 text-lg text-neutral-500 md:flex" role="group" aria-label="Preview size">
+                <button type="button" class="preview-btn border-b-2 border-royal pb-1 text-royal transition hover:text-royal" data-preview="desktop" aria-label="Desktop preview" aria-pressed="true"><i class="fa-solid fa-desktop" aria-hidden="true"></i></button>
+                <button type="button" class="preview-btn border-b-2 border-transparent pb-1 transition hover:text-royal" data-preview="mobile" aria-label="Mobile preview" aria-pressed="false"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="flex items-center gap-3 text-sm">
+                <p class="hidden lg:block">Click edit and create your own amazing website
+                    <button type="button" id="readBTN" class="ml-1 font-medium text-royal underline underline-offset-2 hover:text-blue-900">Read More</button>
+                </p>
+                <a href="signIn.html" class="whitespace-nowrap rounded-full bg-royal px-4 py-1.5 font-medium text-white transition hover:bg-blue-900">Edit this site</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Template info dialog -->
+    <dialog id="infoDialog" class="w-[calc(100%-2rem)] max-w-lg rounded-2xl bg-white p-0 shadow-2xl">
+        <div class="relative p-6 sm:p-8">
+            <button type="button" id="closeDialog" class="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full border border-neutral-300 text-lg transition hover:bg-neutral-100" aria-label="Close">&times;</button>
+            <h2 class="pr-10 text-xl font-semibold">Accessories Store - Website Template</h2>
+            <h3 class="mt-5 text-sm font-semibold uppercase tracking-wide text-neutral-500">Good for</h3>
+            <p class="mt-1 text-sm text-neutral-700">Online cap stores, trendy fashion shops, and apparel retailers</p>
+            <h3 class="mt-5 text-sm font-semibold uppercase tracking-wide text-neutral-500">Description</h3>
+            <p class="mt-1 text-sm leading-relaxed text-neutral-700">Cool caps and hip hats. You've got the fashionable and original designs people want, now you need a modern and vibrant website to match. This ecom template features a dynamic product gallery to showcase your collection, and a striking social media feed to keep your visitors engaged. Click 'Edit' to easily customize your content and start selling online today!</p>
+            <a href="signIn.html" class="mt-6 inline-block rounded-md bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700">Edit Now</a>
+        </div>
+    </dialog>
+
+    <div class="bg-black py-1.5 text-center text-xs font-bold tracking-[0.25em] text-neutral-300 sm:text-sm">FREE SHIPPING WORLDWIDE</div>
+
+    <header class="sticky top-0 z-40 border-b border-neutral-200 bg-white/95 backdrop-blur">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+            <a href="index.html" class="text-3xl font-semibold tracking-[0.2em]">RAW</a>
+
+            <nav class="hidden items-center gap-8 text-sm font-medium uppercase tracking-wider md:flex" aria-label="Main">
+                <a href="index.html" class="pb-1 transition border-b-2 border-black" aria-current="page">Shop</a>
+                <a href="new-arrivals.html" class="pb-1 transition border-b-2 border-transparent hover:border-neutral-400">New Arrivals</a>
+                <a href="#footer" class="border-b-2 border-transparent pb-1 transition hover:border-neutral-400">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-1 text-sm sm:gap-3">
+                <a href="#" class="relative flex items-center gap-2 whitespace-nowrap rounded-md px-2 py-2 hover:bg-neutral-100" aria-label="Cart">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="cartCount" class="grid h-5 min-w-5 place-items-center rounded-full bg-black px-1 text-xs font-semibold text-white">0</span>
                 </a>
-            </div>
-            <div class="top-center">
-                <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-mobile-screen"></i>
-            </div>
-            <div class="top-right">
-                <p>Click edit and create your own amazing website <a href="#" id="readBTN">Read More</a></p>
-                <!-- drop back from back -->
-                <div class="backDrop" id="backDrop"></div>
-                <div class="modal" id="modal" aria-hidden="true" aria-modal="true" role="dialog">
-                    <div class="modalCard" id="modalCard">
-                        <button class="close" id="close" aria-label="close">X</button>
-                        <h1 class="title">Accessories Store - Website Template</h1>
-                        <h3 class="title">Good For:</h3>
-                        <p class="card-para">Online cap stores, trendy fashion shops, and apparel retailers</p>
-
-                        <h3 class="title">Description:</h3>
-                        <p class="card-para">
-                            Cool caps and hip hats. You've got the fashionable and original designs people want, now you
-                            need a
-                            modern and vibrant website to match. This ecom template features a dynamic product gallery
-                            to
-                            showcase your collection, and a striking social media feed to keep your visitors engaged.
-                            Click
-                            'Edit' to easily customize your content and start selling online today!
-                        </p>
-                        <button class="editBox">Edit Now</button>
-                    </div>
-
-                </div>
-                <a href="signIn.html">
-                    <button class="edit-btn" id="edit-login">Edit this site</button>
+                <a href="signIn.html" class="flex items-center gap-2 whitespace-nowrap rounded-md px-2 py-2 hover:bg-neutral-100">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i><span class="hidden sm:inline">Log In</span>
                 </a>
+                <button type="button" id="menuBtn" class="grid h-10 w-10 place-items-center rounded-md hover:bg-neutral-100 md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
+        <nav id="mobileMenu" class="hidden border-t border-neutral-200 bg-white px-4 pb-4 md:hidden" aria-label="Mobile">
+            <a href="index.html" class="block border-b border-neutral-100 py-3 font-medium uppercase tracking-wider">Shop</a>
+            <a href="new-arrivals.html" class="block border-b border-neutral-100 py-3 font-medium uppercase tracking-wider">New Arrivals</a>
+            <a href="#footer" class="block py-3 font-medium uppercase tracking-wider">Contact</a>
+        </nav>
+    </header>
 
-        <!-- Free shipping bar -->
-        <div class="shipping-bar">
-            FREE SHIPPING WORLDWIDE
-        </div>
-
-        <!-- Main navbar -->
-        <div class="main-navbar">
-            <h1 class="brand">RAW</h1>
-            <ul class="nav-icons">
-                <li><i class="fa-solid fa-magnifying-glass"></i> Search</li>
-                <li><i class="fa-solid fa-cart-shopping"></i> Cart</li>
-                <li><i class="fa-solid fa-user"></i> Log In</li>
-                <li><i class="fa-solid fa-bars"></i></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 
-<=======================================================================================>
- ==                                                                                   ==
-                                     page 1
- ==                                                                                   ==
-<=======================================================================================> 
- -->
-    <div id="page1">
-        <!-- 2nd part -->
-        <div class="about-sec">
-            <h1>ALWAYS BE <br>ORIGNAL</h1>
-            <p>NEW ARRIVALS ARE HERE</p>
-            <button class="AboutBTN" id="readbtn" onclick="showpage1()">SHOP</button>
-        </div>
-        <!-- para -->
-        <div class="para">LIMITED EDDITION COLLECTION</div>
-
-        <!--3rd  part -->
-        <div class="cards">
-            <div class="card card1">
-                <img src="https://static.wixstatic.com/media/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap1"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_f4267061a0fe4bb1acee7156275d4206~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_f4267061a0fe4bb1acee7156275d4206~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card2">
-                <img src="https://static.wixstatic.com/media/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap2"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_6b27b52f603e464aa0cd8790f03c22f0~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_6b27b52f603e464aa0cd8790f03c22f0~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card3">
-                <img src="https://static.wixstatic.com/media/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap3"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_a6efca7b18ab4901866d336814d292fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_a6efca7b18ab4901866d336814d292fc~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card4">
-                <img src="https://static.wixstatic.com/media/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap4"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_23d749587fb743859f9bb6b69a24f71e~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_23d749587fb743859f9bb6b69a24f71e~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card5">
-                <img src="https://static.wixstatic.com/media/baac51_444fa6e3add545a6b3757f46a11ee9de~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_444fa6e3add545a6b3757f46a11ee9de~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap5"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_444fa6e3add545a6b3757f46a11ee9de~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_444fa6e3add545a6b3757f46a11ee9de~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_96428f6f85de47268baeffa9258f681f~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_96428f6f85de47268baeffa9258f681f~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card6">
-                <img src="https://static.wixstatic.com/media/baac51_34821e1460024305a72be06274bd65d6~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_34821e1460024305a72be06274bd65d6~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap6"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_34821e1460024305a72be06274bd65d6~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_34821e1460024305a72be06274bd65d6~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_b9031651b1e2480b80e11d455923f407~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b9031651b1e2480b80e11d455923f407~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card7">
-                <img src="https://static.wixstatic.com/media/baac51_e0ebe39677864d7f934e2544bbf9ae19~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_e0ebe39677864d7f934e2544bbf9ae19~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap7"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_e0ebe39677864d7f934e2544bbf9ae19~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_e0ebe39677864d7f934e2544bbf9ae19~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_ae96d298952242c2bb5cce4abdcab7a9~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_ae96d298952242c2bb5cce4abdcab7a9~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-            <div class="card card8">
-                <img src="https://static.wixstatic.com/media/baac51_3564de284ffd41e6a9b4f3f908e3003a~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_3564de284ffd41e6a9b4f3f908e3003a~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap8"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_3564de284ffd41e6a9b4f3f908e3003a~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_3564de284ffd41e6a9b4f3f908e3003a~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_09cf1d76e0dc44c4a7b5b71ccfd7c597~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_09cf1d76e0dc44c4a7b5b71ccfd7c597~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-                <button class="card-btn">Add to Card</button>
-            </div>
-        </div>
-        <!-- btn -->
-        <div class="btn-con"><button class="btn-1">Shop All</button></div>
-        <!-- pictures cards -->
-        <section class="section2">
-            <h2>#INSTAGRAM</h2>
-            <div class="container my-0">
-                <div class="row g-0">
-                    <!-- First Big Card -->
-                    <div class="col-md-4">
-                        <div class="img-card h-300">
-                            <img src="./img/picture1.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                    <!-- Two Small Cards stacked -->
-                    <div class="col-md-2 d-flex flex-column">
-                        <div class="img-card h-150 mb-0">
-                            <img src="./img/picture2.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                        <div class="img-card h-150">
-                            <img src="./img/picture3.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                    <!-- Second Big Card -->
-                    <div class="col-md-4">
-                        <div class="img-card h-300">
-                            <img src="./img/picture4.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                    <!-- Two Small Cards stacked -->
-                    <div class="col-md-2 d-flex flex-column">
-                        <div class="img-card h-150 mb-0">
-                            <img src="./img/picture5.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                        <div class="img-card h-150">
-                            <img src="./img/picture6.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-0">
-                <div class="row g-0">
-
-                    <!-- 1st two Small Cards stacked -->
-                    <div class="col-md-2 d-flex flex-column">
-                        <div class="img-card h-150 mb-0">
-                            <img src="./img/picture8.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                        <div class="img-card h-150">
-                            <img src="./img/picture9.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                    <!-- First Big Card -->
-                    <div class="col-md-4">
-                        <div class="img-card h-300">
-                            <img src="./img/picture7.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                    <!-- 2nd two Small Cards stacked -->
-                    <div class="col-md-2 d-flex flex-column">
-                        <div class="img-card h-150 mb-0">
-                            <img src="./img/picture11.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                        <div class="img-card h-150">
-                            <img src="./img/picture12.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                    <!-- Second Big Card -->
-                    <div class="col-md-4">
-                        <div class="img-card h-300">
-                            <img src="./img/picture10.PNG" alt="">
-                            <div class="overlay">#wix #website #freewebsite #websitetemplate #wix.com</div>
-                        </div>
-                    </div>
-
-                </div>
+    <main>
+        <!-- Hero -->
+        <section class="relative isolate flex min-h-[70vh] items-center justify-center overflow-hidden bg-neutral-800 px-6 py-24 text-center text-white md:min-h-[85vh]">
+            <img src="https://static.wixstatic.com/media/baac51_88d59da2f5a844e9850ee580ab0c8b8d~mv2_d_4000_1782_s_2.jpg/v1/fill/w_1719,h_746,al_tl,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_88d59da2f5a844e9850ee580ab0c8b8d~mv2_d_4000_1782_s_2.jpg" alt="" aria-hidden="true" class="absolute inset-0 -z-10 h-full w-full object-cover" onerror="this.style.display='none'">
+            <div class="absolute inset-0 -z-10 bg-black/35"></div>
+            <div class="max-w-3xl">
+                <h1 class="text-5xl font-semibold leading-[1.05] tracking-wide sm:text-6xl md:text-7xl">ALWAYS BE<br>ORIGINAL</h1>
+                <p class="mt-6 text-sm font-medium tracking-[0.3em] sm:text-base">NEW ARRIVALS ARE HERE</p>
+                <a href="new-arrivals.html" class="mt-8 inline-block border-2 border-white px-8 py-3 text-sm font-semibold tracking-[0.2em] transition hover:bg-white hover:text-black">SHOP</a>
             </div>
         </section>
-    </div>
 
-    <!-- 
-<=======================================================================================>
- ==                                                                                   ==
-                                     page 2
- ==                                                                                   ==
-<=======================================================================================> 
- -->
-    <div id="page2" class="hidden">
-        <ol class="breadcrumb page-no">
-            <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item active"> New Arrivals</li>
-        </ol>
-        <div>
-            <h1 class="heading">New Arrivals</h1>
-        </div>
-        <div class="left-rightSide">
-            <small class="left-side">4 products</small>
-            <div class="dropdown">
-                <button class="btn dropdown-toggle right-side" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Sort by: Recommended
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Recommended</a></li>
-                    <li><a class="dropdown-item" href="#">Newest</a></li>
-                    <li><a class="dropdown-item" href="#">Price (low to high)</a></li>
-                    <li><a class="dropdown-item" href="#">price (high to low)</a></li>
-                    <li><a class="dropdown-item" href="#">Name A-Z</a></li>
-                    <li><a class="dropdown-item" href="#">Name Z-A</a></li>
+        <!-- Collection -->
+        <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+            <h2 class="text-center text-lg font-bold tracking-[0.25em] sm:text-xl">LIMITED EDITION COLLECTION</h2>
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 min-[480px]:grid-cols-2 lg:grid-cols-4">
+                <article class="group product text-center" data-name="RAW Cap 01" data-price="25" data-order="0">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 01" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_f4267061a0fe4bb1acee7156275d4206~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_f4267061a0fe4bb1acee7156275d4206~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 01</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 01">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 02" data-price="25" data-order="1">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 02" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_6b27b52f603e464aa0cd8790f03c22f0~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_6b27b52f603e464aa0cd8790f03c22f0~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 02</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 02">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 03" data-price="25" data-order="2">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 03" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_a6efca7b18ab4901866d336814d292fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_a6efca7b18ab4901866d336814d292fc~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 03</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 03">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 04" data-price="25" data-order="3">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 04" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_23d749587fb743859f9bb6b69a24f71e~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_23d749587fb743859f9bb6b69a24f71e~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 04</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 04">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 05" data-price="25" data-order="4">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_444fa6e3add545a6b3757f46a11ee9de~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_444fa6e3add545a6b3757f46a11ee9de~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 05" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_96428f6f85de47268baeffa9258f681f~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_96428f6f85de47268baeffa9258f681f~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 05</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 05">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 06" data-price="25" data-order="5">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_34821e1460024305a72be06274bd65d6~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_34821e1460024305a72be06274bd65d6~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 06" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_b9031651b1e2480b80e11d455923f407~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b9031651b1e2480b80e11d455923f407~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 06</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 06">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 07" data-price="25" data-order="6">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_e0ebe39677864d7f934e2544bbf9ae19~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_e0ebe39677864d7f934e2544bbf9ae19~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 07" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_ae96d298952242c2bb5cce4abdcab7a9~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_ae96d298952242c2bb5cce4abdcab7a9~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 07</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 07">Add to Cart</button>
+                </article>
+                <article class="group product text-center" data-name="RAW Cap 08" data-price="25" data-order="7">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                        
+                        <img src="https://static.wixstatic.com/media/baac51_3564de284ffd41e6a9b4f3f908e3003a~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_3564de284ffd41e6a9b4f3f908e3003a~mv2_d_2000_1500_s_2.jpg" alt="RAW Cap 08" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover transition duration-500" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/baac51_09cf1d76e0dc44c4a7b5b71ccfd7c597~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_09cf1d76e0dc44c4a7b5b71ccfd7c597~mv2_d_2000_1500_s_2.jpg" alt="" aria-hidden="true" width="565" height="424" loading="lazy" class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-500 group-hover:opacity-100" onerror="this.style.display='none'">
+                    </div>
+                    <h3 class="mt-4 text-base font-semibold">RAW Cap 08</h3>
+                    <p class="text-neutral-600">$25.00</p>
+                    <button type="button" class="add-to-cart mt-3 bg-royal px-5 py-2 text-sm font-medium text-white transition hover:bg-blue-900 md:translate-y-1 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:focus:translate-y-0 md:focus:opacity-100" data-name="RAW Cap 08">Add to Cart</button>
+                </article>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="new-arrivals.html" class="inline-block bg-black px-8 py-3 text-sm font-semibold tracking-wider text-white transition hover:bg-neutral-700">Shop All</a>
+            </div>
+        </section>
+
+        <!-- Instagram -->
+        <section class="bg-blush pb-0 pt-14">
+            <h2 class="pb-10 text-center text-2xl font-bold tracking-wide">#INSTAGRAM</h2>
+            <div class="mx-auto grid max-w-[1600px] grid-cols-2 gap-1 md:grid-cols-12 md:auto-rows-[150px] lg:auto-rows-[170px]">
+                <figure class="group relative overflow-hidden md:col-span-4 md:row-span-2 md:col-start-1 md:row-start-1">
+                    <img src="img/picture1.jpg" alt="Instagram post 1" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-5 md:row-start-1">
+                    <img src="img/picture2.jpg" alt="Instagram post 2" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-5 md:row-start-2">
+                    <img src="img/picture3.jpg" alt="Instagram post 3" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-4 md:row-span-2 md:col-start-7 md:row-start-1">
+                    <img src="img/picture4.jpg" alt="Instagram post 4" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-11 md:row-start-1">
+                    <img src="img/picture5.jpg" alt="Instagram post 5" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-11 md:row-start-2">
+                    <img src="img/picture6.jpg" alt="Instagram post 6" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-1 md:row-start-3">
+                    <img src="img/picture8.jpg" alt="Instagram post 8" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-1 md:row-start-4">
+                    <img src="img/picture9.jpg" alt="Instagram post 9" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-4 md:row-span-2 md:col-start-3 md:row-start-3">
+                    <img src="img/picture7.jpg" alt="Instagram post 7" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-7 md:row-start-3">
+                    <img src="img/picture11.jpg" alt="Instagram post 11" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-2 md:col-start-7 md:row-start-4">
+                    <img src="img/picture12.jpg" alt="Instagram post 12" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+                <figure class="group relative overflow-hidden md:col-span-4 md:row-span-2 md:col-start-9 md:row-start-3">
+                    <img src="img/picture10.jpg" alt="Instagram post 10" width="640" height="640" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:blur-[2px]">
+                    <figcaption class="absolute inset-0 flex items-center justify-center bg-black/45 p-3 text-center text-sm font-light leading-snug text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">#wix #website #freewebsite #websitetemplate #wix.com</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-night text-neutral-200">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.6fr] lg:px-10 lg:py-20">
+            <div>
+                <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-white">Shop</h2>
+                <ul class="space-y-2.5 text-neutral-300">
+                    <li><a class="hover:text-white" href="index.html">Shop</a></li>
+                    <li><a class="hover:text-white" href="#">Stockists</a></li>
+                    <li><a class="hover:text-white" href="#">Blog</a></li>
+                    <li><a class="hover:text-white" href="#">About Us</a></li>
+                    <li><a class="hover:text-white" href="#">Contact</a></li>
                 </ul>
             </div>
-        </div>
-        <!-- cards -->
-        <div class="cards">
-            <div class="card card1">
-                <small class="bg-dark text-white">New</small>
-                <img src="https://static.wixstatic.com/media/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap1"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_765ee8d8af0242ef9a28d7f15b982643~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_f4267061a0fe4bb1acee7156275d4206~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_f4267061a0fe4bb1acee7156275d4206~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-            </div>
-            <div class="card card2">
-                <small class="bg-dark text-white">New</small>
-                <img src="https://static.wixstatic.com/media/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap2"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_b0b367782959434382f77ba6947792ea~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_6b27b52f603e464aa0cd8790f03c22f0~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_6b27b52f603e464aa0cd8790f03c22f0~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$20.00</small>
-            </div>
-            <div class="card card3">
-                <small class="bg-dark text-white">New</small>
-                <img src="https://static.wixstatic.com/media/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap3"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_08eb214d899d45e6a204850dbe5d0e6b~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_a6efca7b18ab4901866d336814d292fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_a6efca7b18ab4901866d336814d292fc~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-            </div>
-            <div class="card card4">
-                <small class="bg-dark text-white">New</small>
-                <img src="https://static.wixstatic.com/media/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg"
-                    alt="cap4"
-                    onmouseout="this.src='https://static.wixstatic.com/media/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_8916d233b97e408db6bc3089911d00fc~mv2_d_2000_1500_s_2.jpg'"
-                    onmouseover="this.src='https://static.wixstatic.com/media/baac51_23d749587fb743859f9bb6b69a24f71e~mv2_d_2000_1500_s_2.jpg/v1/fill/w_565,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/baac51_23d749587fb743859f9bb6b69a24f71e~mv2_d_2000_1500_s_2.jpg'">
-                <p>I`m a Product</p>
-                <small>$25.00</small>
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <div class="footer">
-        <div class="Fpart1">
             <div>
-                <p>Shop</p>
-                <p>Stockists</p>
-                <p>Blog</p>
-                <p>About Us</p>
-                <p>Contact</p>
+                <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-white">Help</h2>
+                <ul class="space-y-2.5 text-neutral-300">
+                    <li><a class="hover:text-white" href="#">FAQ</a></li>
+                    <li><a class="hover:text-white" href="#">Shipping &amp; Returns</a></li>
+                    <li><a class="hover:text-white" href="#">Store Policy</a></li>
+                    <li><a class="hover:text-white" href="#">Payment Methods</a></li>
+                </ul>
+            </div>
+            <div class="sm:col-span-2 lg:col-span-1">
+                <h2 class="mb-4 text-sm font-semibold uppercase tracking-widest text-white">Newsletter</h2>
+                <form id="newsletter" class="space-y-4" novalidate>
+                    <div>
+                        <label for="nlEmail" class="block text-sm text-neutral-300">Enter your email here *</label>
+                        <input id="nlEmail" type="email" autocomplete="email" required class="mt-1 w-full border-0 border-b-2 border-neutral-500 bg-transparent px-0 py-2 text-white placeholder-neutral-500 focus:border-white focus:outline-none focus:ring-0">
+                    </div>
+                    <label class="flex items-start gap-2 text-sm text-neutral-300">
+                        <input type="checkbox" id="nlConsent" class="mt-1 h-4 w-4 accent-royal"> Yes, subscribe me to your newsletter.
+                    </label>
+                    <button type="submit" class="bg-white px-6 py-2.5 text-sm font-semibold uppercase tracking-wider text-black transition hover:bg-neutral-300">Subscribe</button>
+                    <p id="nlMsg" class="min-h-5 text-sm text-neutral-300" role="status" aria-live="polite"></p>
+                </form>
+                <div class="mt-4 flex gap-5 text-xl lg:justify-end">
+                    <a href="#" aria-label="Facebook" class="hover:text-white"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter" class="hover:text-white"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Pinterest" class="hover:text-white"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="YouTube" class="hover:text-white"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram" class="hover:text-white"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
-        <div class="Fpart2">
-            <div>
-                <p>FQA</p>
-                <p>Shopping & Returns</p>
-                <p>Store Policy</p>
-                <p>Payment Methods</p>
-            </div>
-        </div>
-        <div class="Fpart3">
-            <div class="Fpart3-1">
-                <label>Enter your email here...*</label>
-                <input type="email">
-                <span>
-                    <input type="checkbox"> Yes, subscribe me to your newsletter.
-                    <button class="Fbtn">
-                        SUBSCRIBE
-                    </button>
-                </span>
-            </div>
-            <div class="Ficons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-pinterest-p"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </div>
-        </div>
-    </div>
+        <div class="border-t border-white/10 py-5 text-center text-sm text-neutral-400">&copy; 2026 RAW. All rights reserved.</div>
+    </footer>
 
-    <script src="index.js"></script>
+    <div id="toast" class="pointer-events-none fixed bottom-5 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-full bg-black px-5 py-3 text-sm text-white opacity-0 shadow-lg transition" role="status" aria-live="polite"></div>
+</div>
+<script src="main.js"></script>
 </body>
-
 </html>
